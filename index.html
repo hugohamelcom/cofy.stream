@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+	<meta charset="UTF-8">
+	<title>Cofy - Remove distraction on your second screen and stay focused</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="style.css">
+	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+	<script>if(!sessionStorage.getItem("_swa")&&document.referrer.indexOf(location.protocol+"//"+location.host)!== 0){fetch("https://counter.dev/track?"+new URLSearchParams({referrer:document.referrer,screen:screen.width+"x"+screen.height,user:"hugo@hugohamel.com",utcoffset:"-4"}))};sessionStorage.setItem("_swa","1");</script>
+	<script>
+		var script = document.createElement("script");
+		script.src = "https://cdn.jsdelivr.net/npm/hockeystack@latest/hockeystack.min.js";
+		script.async = 1;
+		script.dataset.apikey = "49f7d6800fc168a6a6fb3711dc8d14";
+		script.dataset.cookieless = 1;
+		document.getElementsByTagName('head')[0].append(script);
+	</script>
+	<script src="script.js"></script>
+	<header><div id="header">
+		<h1 class="title">Cofy</h1>
+		<div id="flavor">
+			<p>Pick Your Flavor</p>
+			<ul>
+				<li><b>🌈 Rainbow</b> <small>(current)</small></li>
+				<li><a href="/dark">⚫ Dark</a></li>
+			</ul>
+		</div>
+		<span class="fullscreen">
+			<button onclick="openFullscreen();" class="fullscreen-btn"><i class="icon-resize-full" id="fullscreen-expand"></i></button>
+			<button onclick="closeFullscreen();" class="fullscreen-btn"><i class="icon-resize-small" id="fullscreen-exit"></i></button>
+		</span>
+	</div></header>
+	<section><div id="content">
+		<div id="timer-input">
+			<p>What time is your next event?<br><span>Countdown will stop at this time</span></p>
+			<input type="time" id="timer-time" name="" value="--:--">
+			<button onclick="submitPlusTime(25);" class="pomodoro">+ 25 min.</button>
+			<button onclick="submitTime();">Start Countdown</button>
+			<button onclick="submitPlusTime(5);" class="pomodoro">+ 5 min.</button>
+		</div>
+		<div id="timer-countdown" style="display: none;">
+			<p id="time-countdown">--:--:--</p>
+			<button onclick="resetTime();">Stop / Reset</button>
+		</div>
+	</div></section>
+	<footer><div id="footer">
+		<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="hhml" data-color="#BD5FFF" data-emoji="☕"  data-font="Arial" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#ffffff" data-coffee-color="#FFDD00" ></script>
+	</div></footer>
+</body>
+</html>

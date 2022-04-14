@@ -1,0 +1,229 @@
+body {
+	margin: 0;
+	width: 100%;
+	height: 100vh;
+	color: #fff;
+	background: linear-gradient(-45deg, #C5E5DE, #B1E0EC, #A2C5BF, #95D1C4, #6DC5DC, #8ADCB3, #72BDC2, #8A9BB1, #72C1B0, #FED156, #52BAD5, #66CC99, #F99899, #E3B63D, #F1C40F, #06B3DB, #FEBE12, #98AE60, #1ABC9C, #CC89A2, #EE836E, #F39C12, #64AE60, #78AD45, #2C9AB7, #3498DB, #E8755C, #27AE60, #449A88, #E67E22, #16A085, #EA5B4D, #C26787, #E85C41, #2980B9, #0082C8, #527D5A, #E54B4B, #E74C3C, #DC3D66, #167C80, #D35400, #72616E, #547B30, #D83944, #DB334E, #9B59B6, #DB3A1B, #BD3559, #27695E, #C0392B, #345773, #993366, #8E368B, #16528E, #34495E, #782344);
+	background-size: 458100% 458100%;
+	-webkit-animation: gradientBG 1800s ease infinite;
+	        animation: gradientBG 1800s ease infinite;
+}
+
+@-webkit-keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+/*.container {
+	width: 100%;
+	position: absolute;
+	top: 35%;
+	text-align: center;
+}*/
+
+#header,
+#footer,
+#content {
+	opacity: 1;
+	transition: 0.5s;
+	color: #fff;
+}
+#header {
+	opacity: 0.75;
+}
+#header:hover {
+	opacity: 0.75;
+}
+#footer:hover {
+	opacity: 1;
+}
+#content:hover {
+	opacity: 1;
+}
+
+#header h1 {
+	font-size: 5em;
+	vertical-align: top;
+	margin-top: 2%
+}
+
+#flavor {
+	display: inline-block;
+	margin-top: 1%
+}
+#flavor p {
+	margin: 0 0 10px 0;
+	text-decoration: underline;
+	font-size: 0.9em;
+}
+#flavor ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	font-size: 1.1em;
+}
+#flavor ul li {
+	margin: 0 0 10px 0;
+}
+#flavor ul li:hover a {
+	font-weight: bold;
+}
+#flavor ul li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.title,
+.fullscreen {
+	display: inline-block;
+	margin: 1% 2%;
+}
+.fullscreen {
+	float: right;
+}
+.fullscreen-btn {
+	border: 0;
+	background: none;
+	line-height: 2em;
+	font-size: 2em;
+	outline: 0 none;
+	color: #fff;
+}
+#fullscreen-expand {
+	display: inline-block;
+}
+#fullscreen-exit {
+	display: none;
+}
+
+#content {
+	/* position: relative; */
+	width: 100%;
+	height: 100%;
+}
+
+#content #timer-input,
+#content #timer-countdown {
+	opacity: 0.8;
+	margin: 0;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -45%);
+	text-align: center;
+}
+#content #timer-input p {
+	/* text-transform: uppercase; */
+	font-weight: bold;
+	font-size: 3em;
+	line-height: 0.75em;
+	color: #fff;
+}
+#content #timer-input p span {
+	font-weight: bold;
+	font-size: 0.5em;
+	line-height: 0.5em;
+	color: #fff;
+}
+#content #timer-input input {
+	display: block;
+	margin: 0 auto;
+}
+#content #timer-input input[type="time"],
+#content #timer-countdown p {
+	width: 100%;
+	height: 100%;
+	font-size: 1000%;
+	font-size: calc(9*100vw/80);
+	font-weight: bold;
+	background-color: transparent;
+	border: none;
+	-webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    line-height: initial;
+    color: #fff;
+}
+#content #timer-input input[type="time"]::-webkit-calendar-picker-indicator {
+	font-size: 50%;
+	filter: invert(100%);
+	opacity: 0.5;
+}
+#content #timer-input input[type="time"]::-webkit-datetime-edit-text {
+	font-size: 500%;
+}
+#content #timer-input button,
+#content #timer-countdown button {
+	text-transform: uppercase;
+	font-size: 200%;
+	font-weight: bold;
+	padding: 1.5% 2%;
+	border: 5px solid #fff;
+	background-color: #fff;
+	color: #000;
+	mix-blend-mode: screen;
+}
+#content #timer-input button.pomodoro {
+	text-transform: uppercase;
+	font-size: 100%;
+	font-weight: bold;
+	padding: 1.5% 2%;
+	color: #fff;
+	border: 5px solid transparent;
+	background-color: transparent;
+	mix-blend-mode: screen;
+}
+#content #timer-countdown button {
+	padding: 3% 4%;
+}
+#content #timer-input button:hover,
+#content #timer-countdown button:hover {
+	background-color: transparent;
+	color: #fff;
+}
+#content #timer-input button.pomodoro:hover {
+	border: 5px solid #fff;
+}
+#content #timer-input button:active,
+#content #timer-countdown button:active {
+	margin-top: -0.25%;
+	margin-bottom: -0.25%;
+	padding: 1.75% 2.25%;
+}
+#content #timer-countdown button:active {
+	padding: 3.25% 4.25%;
+}
+
+#footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	color: white;
+	text-align: center;
+	margin-bottom: 25px;	
+}
+#footer .bmc-btn-container {
+	position: relative;
+	display: inline-block;
+	text-align: left;
+}
