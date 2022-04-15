@@ -1,3 +1,7 @@
+h1, p, a, span, b, small, input, button, select, textarea {
+	font-family: 'Chau Philomene One',"Helvetica Neue",Helvetica,Arial,sans-serif !important;
+
+}
 body {
 	margin: 0;
 	width: 100%;
@@ -27,6 +31,7 @@ body {
 }
 
 #header h1 {
+	font-style: italic;
 	font-size: 5em;
 	vertical-align: top;
 	margin-top: 2%
